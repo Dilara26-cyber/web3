@@ -6,13 +6,16 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
+import { TransactionProvider } from "./context/Transactions";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
+    <TransactionProvider>
     <BrowserRouter>
     <App />
     </BrowserRouter>
+    </TransactionProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
